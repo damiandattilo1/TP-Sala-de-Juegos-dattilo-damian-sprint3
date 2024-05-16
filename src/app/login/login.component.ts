@@ -32,6 +32,11 @@ export class LoginComponent {
     const col = this.firestore.collection('usuarios');
     col.add({Nombre: 'Fernando', Apellido: 'Frenandez', edad: 30});
   }
+  accesoRapido()
+  {
+    this.userName = "robertoperez@gmail.com";
+    this.password = "1234567";
+  }
 
 }
 

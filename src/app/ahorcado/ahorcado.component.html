@@ -1,0 +1,39 @@
+
+
+<input type="text" class="form-control" id="palabraIngresada" [(ngModel)]="palabraIngresada" name="palabraIngresada" required readonly>
+ 
+
+<button (click) = "validarLetra('A')">A</button>
+<button (click) = "validarLetra('B')">B</button>
+<button (click) = "validarLetra('C')">C</button>
+<button (click) = "validarLetra('D')">D</button>
+<button (click) = "validarLetra('E')">E</button>
+<button (click) = "validarLetra('F')">F</button>
+<button (click) = "validarLetra('G')">G</button>
+<button (click) = "validarLetra('H')">H</button>
+<button (click) = "validarLetra('I')">I</button>
+<button (click) = "validarLetra('J')">K</button>
+<button (click) = "validarLetra('L')">L</button>
+<button (click) = "validarLetra('M')">M</button><br>
+<button (click) = "validarLetra('N')">N</button>
+<button (click) = "validarLetra('O')">O</button>
+<button (click) = "validarLetra('P')">P</button>
+<button (click) = "validarLetra('Q')">Q</button>
+<button (click) = "validarLetra('R')">R</button>
+<button (click) = "validarLetra('S')">S</button>
+<button (click) = "validarLetra('T')">T</button>
+<button (click) = "validarLetra('U')">U</button>
+<button (click) = "validarLetra('V')">V</button>
+<button (click) = "validarLetra('W')">W</button>
+<button (click) = "validarLetra('X')">X</button>
+<button (click) = "validarLetra('Y')">Y</button>
+<button (click) = "validarLetra('Z')">Z</button>
+
+<div style="background-color: yellow" >{{vidas}}</div>
+
+<div style="background-color: orange" >{{mensaje}}</div>
+<div style="background-color: orange" >letras incorrectas {{letrasIncorrectas}}</div>
+
+<div style="background-color: blue; color: white;" >puntos {{puntos}}</div>
+<div style="background-color: green; color: white;" >ayuda {{palabraCorrecta.substring(0,2)}}</div>
+<router-outlet></router-outlet>
