@@ -1,0 +1,17 @@
+<div *ngIf="iniciado">
+    <div class="image-container">
+        <img src="assets/dado{{ dado }}.jpg" alt="Image {{ dado }}" *ngFor="let dado of dados">
+    </div>
+    <div class = "resultado">
+        Resultado: {{resultado}}
+    </div>
+    <div class = "puntaje">
+        Puntaje: {{puntaje}}
+    </div>
+</div>
+<button (click)="nuevoJuego()">Nuevo Juego</button><br><br>
+
+<button (click)="generala()">Generala</button>
+<button (click)="poker()">Poker</button>
+<button (click)="full()">Full</button>
+<button (click)="escalera()">Escalera</button>

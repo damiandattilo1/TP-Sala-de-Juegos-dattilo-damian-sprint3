@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { PuntajeService } from '../services/puntaje.service';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mayor-omenor',
@@ -17,7 +19,19 @@ export class MayorOMenorComponent {
   mensaje :string = "";
   puntaje :number = 0;
 
-  constructor(public puntajeS :PuntajeService){}
+  constructor(private authF: AuthService, private router: Router, private puntajeS :PuntajeService){
+    if (this.authF.userCredentials == null) 
+      {
+        this.redireccionar();
+  
+  
+      }
+  }
+
+  redireccionar() {
+
+    this.router.navigate(["/login"]);
+  }
 
   ngOnInit() {
     this.puntajeS.obtenerPuntajeObs().subscribe(documento => {

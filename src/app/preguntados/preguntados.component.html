@@ -1,0 +1,25 @@
+<div><button (click)="seleccionarPregunta()">Iniciar Juego
+
+    </button>
+    <div *ngIf="pregunta!=''">
+
+
+        <br><br>Pregunta: {{pregunta}}
+        <br><br>
+        
+        <div *ngIf="!cargado" class = "danger">
+            {{mensajeError}}
+        </div>
+
+        <div *ngIf="cargado">
+            <div *ngFor="let item of imagenes; index as index; trackBy: trackImagen">
+                <img src="{{item?.url}}" width="80"><button (click)="seleccionoRespuesta(index)">
+                    {{opciones[index]}}</button><br><br>
+            </div>
+        </div>
+
+        <br><br>
+
+        {{textoResultado}}
+    </div>
+</div>
